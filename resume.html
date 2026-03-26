@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>suvankar_maji@vit_vellore:~ | RESUME</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#eaffde",
+                        "on-secondary-fixed-variant": "#614000",
+                        "surface-bright": "#3a3939",
+                        "on-secondary": "#432c00",
+                        "primary-fixed": "#77ff61",
+                        "on-secondary-fixed": "#281800",
+                        "inverse-on-surface": "#313030",
+                        "secondary-container": "#fdaf00",
+                        "on-background": "#e5e2e1",
+                        "on-primary": "#013a00",
+                        "primary-fixed-dim": "#02e600",
+                        "on-tertiary": "#013a00",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#ffd393",
+                        "outline-variant": "#3b4b35",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#015300",
+                        "on-secondary-container": "#694600",
+                        "primary-container": "#00ff00",
+                        "surface-tint": "#02e600",
+                        "on-tertiary-fixed": "#002200",
+                        "secondary-fixed": "#ffddaf",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "tertiary-container": "#00ff00",
+                        "on-surface-variant": "#b9ccaf",
+                        "on-primary-container": "#027100",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#027100",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#002200",
+                        "primary": "#eaffde",
+                        "inverse-primary": "#026e00",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#77ff61",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#ffba43",
+                        "outline": "#84967c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#02e600",
+                        "on-primary-fixed-variant": "#015300",
+                        "error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #02e600;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-[#131313] text-[#00FF00] font-['Space_Grotesk'] tracking-tight uppercase text-sm flex justify-between items-center w-full px-6 h-12 shadow-[0_0_10px_rgba(2,230,0,0.08)]">
+        <div class="flex items-center gap-4">
+            <span class="text-[#00FF00] font-mono font-bold before:content-['&gt;_']">suvankar_maji@vit_vellore:~</span>
+        </div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2"
+                href="./about">./about</a>
+            <a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2"
+                href="./main.html">./home</a>
+            <a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2"
+                href="./project.html">./projects</a>
+            <a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2"
+                href="./education.html">./education</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined cursor-pointer hover:bg-[#02e600]/10 p-1"
+                data-icon="terminal">terminal</span>
+            <span class="material-symbols-outlined cursor-pointer hover:bg-[#02e600]/10 p-1"
+                data-icon="settings">settings</span>
+            <span class="material-symbols-outlined cursor-pointer hover:bg-[#02e600]/10 p-1 text-error"
+                data-icon="power_settings_new">power_settings_new</span>
+        </div>
+    </header>
+    <!-- Main Canvas -->
+    <main class="mt-12 mb-8 h-[calc(100vh-80px)] overflow-y-auto p-12 custom-scrollbar px-8 md:px-24 lg:px-48">
+        <div class="max-w-6xl mx-auto grid grid-cols-12 gap-8">
+            <!-- Profile Header -->
+            <section class="col-span-12 md:col-span-8 space-y-4">
+                <div
+                    class="inline-block bg-primary-container/10 px-3 py-1 text-primary-fixed-dim font-mono text-xs mb-2">
+                    SESSION_ID: 882-SK-MAJI
+                </div>
+                <h1 class="font-headline text-7xl font-bold tracking-tighter text-on-surface leading-[0.9]">
+                    SUVANKAR MAJI
+                </h1>
+                <div class="flex items-center gap-4">
+                    <div class="h-[2px] w-24 bg-primary-fixed-dim"></div>
+                    <p class="font-headline text-2xl text-primary-fixed-dim uppercase tracking-widest">Full-Stack
+                        Engineer &amp; Digital Architect</p>
+                </div>
+                <div class="pt-8 flex flex-wrap gap-4">
+                    <button
+                        class="group flex items-center bg-transparent border-none text-primary-fixed-dim font-headline text-xl font-bold hover:bg-primary-container/10 px-4 py-2 transition-all">
+                        <span class="mr-2">&gt;</span> CURL -O RESUME.PDF
+                        <span class="ml-2 w-3 h-6 bg-primary-fixed-dim cursor-blink inline-block align-middle"></span>
+                    </button>
+                    <button
+                        class="flex items-center text-secondary font-headline text-xl font-bold hover:underline px-4 py-2 decoration-2 underline-offset-8">
+                        _ VIEW_SOURCE
+                    </button>
+                </div>
+            </section>
+            <!-- Metadata / Stats Panel -->
+            <section class="col-span-12 md:col-span-4 bg-surface-container-low p-6 space-y-6">
+                <div class="space-y-1">
+                    <p class="text-[10px] text-on-surface-variant/50 font-mono uppercase tracking-widest">Location</p>
+                    <p class="font-headline text-lg font-bold text-on-surface">VELLORE, IN // REMOTE</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-on-surface-variant/50 font-mono uppercase tracking-widest">Availability
+                    </p>
+                    <p class="font-headline text-lg font-bold text-primary-fixed-dim">AVAILABLE_FOR_HIRE</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-on-surface-variant/50 font-mono uppercase tracking-widest">Terminal_Theme
+                    </p>
+                    <p class="font-headline text-lg font-bold text-secondary">AMBER_CRT_01</p>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/10">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-2xl font-bold font-headline">12+</p>
+                            <p class="text-[10px] text-on-surface-variant/50 font-mono uppercase">Deployments</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold font-headline">04</p>
+                            <p class="text-[10px] text-on-surface-variant/50 font-mono uppercase">Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PROFILE_OVERVIEW -->
+            <section class="col-span-12 bg-surface-container p-10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none select-none">
+                    <span class="material-symbols-outlined text-9xl" data-icon="architecture">architecture</span>
+                </div>
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary-fixed-dim"
+                        data-icon="person_search">person_search</span>
+                    <h2 class="font-headline text-2xl font-bold tracking-tight">PROFILE_OVERVIEW</h2>
+                </div>
+                <p class="text-xl md:text-2xl font-body font-light text-on-surface-variant leading-relaxed max-w-4xl">
+                    Dedicated to building high-performance, scalable digital ecosystems. My approach combines the raw
+                    power of <span class="text-primary-fixed-dim font-mono">low-level architecture</span> with the
+                    elegance of modern <span class="text-secondary font-mono">full-stack frameworks</span>. Specializing
+                    in cloud-native applications and hyper-efficient data pipelines.
+                </p>
+            </section>
+            <!-- TECHNICAL_STACK (Zebra Striped List) -->
+            <section class="col-span-12 md:col-span-6 space-y-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary-fixed-dim" data-icon="layers">layers</span>
+                    <h2 class="font-headline text-2xl font-bold tracking-tight">TECHNICAL_STACK</h2>
+                </div>
+                <div class="space-y-1">
+                    <div
+                        class="flex justify-between items-center p-4 bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                        <span class="font-mono text-sm text-primary-fixed-dim">01 // LANGUAGES</span>
+                        <span class="font-headline font-bold">PYTHON / JAVA / C++ / SQL</span>
+                    </div>
+                    <div
+                        class="flex justify-between items-center p-4 bg-surface-container hover:bg-surface-container-high transition-colors">
+                        <span class="font-mono text-sm text-primary-fixed-dim">02 // ML/AI</span>
+                        <span class="font-headline font-bold">SCIKIT-LEARN / SHAP / ENSEMBLE</span>
+                    </div>
+                    <div
+                        class="flex justify-between items-center p-4 bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                        <span class="font-mono text-sm text-primary-fixed-dim">03 // WEB</span>
+                        <span class="font-headline font-bold">STREAMLIT / HTML / CSS / JS</span>
+                    </div>
+                    <div
+                        class="flex justify-between items-center p-4 bg-surface-container hover:bg-surface-container-high transition-colors">
+                        <span class="font-mono text-sm text-primary-fixed-dim">04 // TOOLS</span>
+                        <span class="font-headline font-bold">GIT / DOCKER / POWER SHELL</span>
+                    </div>
+                </div>
+            </section>
+            <!-- WORK_HISTORY -->
+            <section class="col-span-12 md:col-span-6 space-y-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary-fixed-dim" data-icon="history">history</span>
+                    <h2 class="font-headline text-2xl font-bold tracking-tight">WORK_HISTORY</h2>
+                </div>
+                <div class="space-y-8">
+                    <div class="relative pl-6 border-l-2 border-primary-fixed-dim/20">
+                        <div class="absolute top-0 left-[-5px] w-2 h-2 bg-primary-fixed-dim"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-headline font-bold text-lg leading-tight uppercase">ML Research &
+                                    Development</h3>
+                                <p class="font-mono text-xs text-secondary">VIT_PROJECTS</p>
+                            </div>
+                            <span class="font-mono text-[10px] text-on-surface-variant/60">2023 - PRESENT</span>
+                        </div>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Engineered high-performance machine learning pipelines for healthcare and fintech. Developed
+                            the FinTech Fraud Guard using advanced ensemble methods and SHAP-based AI explainability.
+                        </p>
+                    </div>
+                    <div class="relative pl-6 border-l-2 border-primary-fixed-dim/20">
+                        <div class="absolute top-0 left-[-5px] w-2 h-2 bg-primary-fixed-dim/40"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-headline font-bold text-lg leading-tight uppercase">Open Source
+                                    Contributor</h3>
+                                <p class="font-mono text-xs text-secondary">VARIOUS_REPOS</p>
+                            </div>
+                            <span class="font-mono text-[10px] text-on-surface-variant/60">2021 - ACTIVE</span>
+                        </div>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Contributing to developer tooling and CLI utilities. Focused on improving developer
+                            experience and performance optimization in the JS ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="fixed bottom-0 w-full z-50 flex justify-between px-6 py-1 items-center bg-[#131313] text-[#FFBF00] font-mono text-[10px] uppercase tracking-widest border-t border-[#FFBF00]/5">
+        <div class="flex items-center gap-4">
+            <span>SYS_STATUS: ONLINE</span>
+            <span class="hidden md:inline">SHELL: ZSH</span>
+            <span class="hidden md:inline text-[#FFBF00]/40">|</span>
+            <span>LAST_LOGIN: 2023-10-27</span>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors"
+                href="#">MAN_PAGES</a>
+            <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors"
+                href="#">PRIVACY</a>
+            <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors"
+                href="#">ENCRYPT</a>
+        </div>
+    </footer>
+    <!-- Background Glitch Effect Overlay (Subtle) -->
+    <div
+        class="fixed inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] z-[100]">
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

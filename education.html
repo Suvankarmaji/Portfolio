@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EDUCATION_LOG | MAJI_OS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        :root {
+            --primary: #00FF00;
+            --primary-glow: rgba(0, 255, 0, 0.4);
+            --primary-bg: rgba(0, 255, 0, 0.05);
+            --secondary: #ffd393;
+            --surface: #0a0a0a;
+            --glass: rgba(22, 22, 22, 0.7);
+        }
+        
+        body {
+            background-color: var(--surface);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(2, 230, 0, 0.03) 0%, transparent 100%),
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 100%, 100% 2px, 3px 100%;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 0, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 255, 0, 0.3);
+            box-shadow: 0 8px 40px 0 rgba(0, 255, 0, 0.05);
+        }
+
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: var(--surface); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); }
+        
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 8px var(--primary);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#131313] text-[#e5e2e1] font-body selection:bg-primary/20">
+    <header
+        class="bg-black/60 backdrop-blur-md flex justify-between items-center w-full px-6 h-12 z-[100] fixed top-0 border-b border-primary/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="status-dot"></div>
+                <span class="text-[#00FF00] font-mono font-bold font-['Space_Grotesk'] tracking-tight uppercase text-xs">maji_os_v3.1 // edu_subsystem</span>
+            </div>
+        </div>
+        <nav class="hidden md:flex gap-8 h-full items-center">
+            <a class="nav-link text-primary/60 hover:text-primary font-['Space_Grotesk'] uppercase text-xs transition-colors h-full flex items-center" href="./main.html#home">/home</a>
+            <a class="nav-link text-primary/60 hover:text-primary font-['Space_Grotesk'] uppercase text-xs transition-colors h-full flex items-center" href="./project.html">/git</a>
+            <a class="nav-link text-primary font-['Space_Grotesk'] uppercase text-xs transition-colors h-full flex items-center active" href="./education.html">/edu</a>
+            <a class="nav-link text-primary/60 hover:text-primary font-['Space_Grotesk'] uppercase text-xs transition-colors h-full flex items-center" href="./resume.html">/res</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary/60 hover:bg-primary/10 p-1.5 rounded cursor-pointer transition-all" id="terminal-trigger">terminal</span>
+            <span class="material-symbols-outlined text-primary/60 hover:bg-primary/10 p-1.5 rounded cursor-pointer transition-all" id="settings-trigger">settings</span>
+            <span class="material-symbols-outlined text-red-500 hover:bg-red-500/10 p-1.5 rounded cursor-pointer transition-all" id="power-trigger">power_settings_new</span>
+        </div>
+    </header>
+
+
+    <main class="mt-12 p-8 md:p-12 min-h-screen px-8 md:px-24 lg:px-48">
+        <section class="max-w-4xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-5 duration-700">
+            <div class="border-b border-primary/20 pb-8">
+                <h1 class="font-headline text-5xl font-bold text-primary uppercase tracking-tighter">Academic_Stack</h1>
+                <p class="font-mono text-sm text-primary/60 mt-2">// tracing_educational_footprint</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- UNIVERSITY -->
+                <div class="relative pl-8 border-l-2 border-primary/20 animate-in fade-in slide-in-from-left-5 duration-1000">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-primary/20 rounded-full border-2 border-primary flex items-center justify-center">
+                        <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="space-y-4 glass-card p-8 border hover:border-primary/30 group">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                            <div>
+                                <h2 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">VIT University, Vellore</h2>
+                                <p class="text-primary font-mono text-sm tracking-widest">B.TECH | CORE_CS_ENGG</p>
+                            </div>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded text-[10px] font-mono font-bold border border-primary/20">CURRENTLY_ENROLLED</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-2 text-primary/60 text-xs">
+                                <span class="material-symbols-outlined text-sm">location_on</span> Vellore, India
+                            </div>
+                        </div>
+                        <p class="text-sm text-[#e5e2e1]/80 max-w-2xl leading-relaxed">
+                            Currently pursuing Bachelor of Technology in Computer Science & Engineering. Specialized focus on AI architectures, ML performance tuning, and full-stack system design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HIGHER SECONDARY -->
+                <div class="relative pl-8 border-l-2 border-primary/20">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-[#131313] border-2 border-primary/40 rounded-full"></div>
+                    <div class="space-y-4 p-8 glass-card border">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                            <div>
+                                <h2 class="font-headline text-xl font-bold">K.P.H.S (Higher Secondary)</h2>
+                                <p class="text-primary/60 font-mono text-xs tracking-widest uppercase">Class 12th | WBCHSE</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-primary font-mono text-2xl font-bold">85%</span>
+                                <span class="text-[10px] font-mono text-primary/40">SCORE_VAL</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-primary/60 text-xs">
+                            <span class="material-symbols-outlined text-sm">location_on</span> Howrah, West Bengal
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECONDARY -->
+                <div class="relative pl-8 border-l-2 border-primary/20 opacity-80">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-[#131313] border-2 border-primary/40 rounded-full"></div>
+                    <div class="space-y-4 p-8 glass-card border">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                            <div>
+                                <h2 class="font-headline text-xl font-bold">K.P.H.S (Secondary Education)</h2>
+                                <p class="text-primary/60 font-mono text-xs tracking-widest uppercase">Class 10th | WBBSE</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-primary font-mono text-2xl font-bold">74%</span>
+                                <span class="text-[10px] font-mono text-primary/40">SCORE_VAL</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-primary/60 text-xs">
+                            <span class="material-symbols-outlined text-sm">location_on</span> Howrah, West Bengal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed bottom-0 w-full z-50 bg-[#131313] px-6 py-1 h-8 flex items-center justify-between border-t border-primary/10">
+        <div class="flex items-center gap-4 flex-1">
+            <span class="text-secondary font-mono text-[10px] uppercase tracking-widest whitespace-nowrap">ACADEMIC_LOG_ONLINE</span>
+            <div class="h-4 w-[1px] bg-secondary/20"></div>
+            <div class="flex items-center gap-2 flex-1 max-w-xl group">
+                <span class="text-primary font-mono text-[10px]">&gt;</span>
+                <input id="terminal-input" class="bg-transparent border-none outline-none text-primary font-mono text-[10px] w-full placeholder:text-primary/30 focus:ring-0 p-0" placeholder="// input_query" type="text" autocomplete="off"/>
+            </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+            <span class="text-secondary font-mono text-[10px] uppercase tracking-widest opacity-60">UPTIME: <span id="uptime-counter">00:00:00</span></span>
+        </div>
+    </footer>
+
+    <!-- SHARED MODALS FROM MAIN -->
+    <div id="dashboard-overlay" class="fixed inset-0 z-[150] bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-surface border border-primary/20 w-full max-w-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden">
+            <div class="bg-surface-container h-10 flex items-center justify-between px-4 border-b border-primary/10">
+                <span id="dashboard-title" class="font-mono text-xs text-primary uppercase tracking-[0.2em]">SYSTEM_DASHBOARD</span>
+                <button onclick="closeDashboard()" class="material-symbols-outlined text-primary/60 hover:text-error transition-colors">close</button>
+            </div>
+            <div id="dashboard-content" class="p-8 font-mono text-xs space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar"></div>
+        </div>
+    </div>
+
+    <!-- Terminal Overlay (Shared) -->
+    <div id="terminal-overlay" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 md:p-12 overflow-hidden">
+        <div class="bg-surface w-full h-full max-w-5xl border border-primary/30 shadow-[0_0_30px_rgba(2,230,0,0.2)] flex flex-col accent-transition">
+            <div class="bg-surface-container h-10 flex items-center justify-between px-4 border-b border-primary/20">
+                <span class="font-mono text-xs text-primary/60 uppercase">root@maji:~ terminal</span>
+                <button id="close-terminal" class="material-symbols-outlined text-primary/60 hover:text-error">close</button>
+            </div>
+            <div id="terminal-body" class="flex-1 p-6 font-mono text-sm overflow-y-auto custom-scrollbar">
+                <div id="terminal-history"></div>
+                <div class="flex items-center gap-2"><span class="text-primary">&gt;</span><input id="modal-terminal-input" type="text" class="flex-1 bg-transparent border-none outline-none text-primary focus:ring-0 p-0" autocomplete="off" autofocus/></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ambient-glow" class="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,0,0.02)_0%,rgba(0,0,0,0)_100%)] z-10 transition-colors duration-500"></div>
+    <div id="crt-overlay" class="fixed inset-0 pointer-events-none opacity-[0.03] z-[60]" style="background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%;"></div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
