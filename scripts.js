@@ -354,4 +354,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         setTimeout(() => type(autoCommands[0]), 1000);
     }
+
+    // --- INSTANT PING MODAL LOGIC ---
+    const pingOverlay = document.getElementById('ping-overlay');
+    const instantPingBtn = document.getElementById('instant-ping-btn');
+    const closePing = document.getElementById('close-ping');
+    const pingForm = document.getElementById('ping-form');
+
+    if (instantPingBtn && pingOverlay) {
+        instantPingBtn.addEventListener('click', () => {
+            pingOverlay.classList.remove('hidden');
+            pingOverlay.classList.add('flex');
+            document.getElementById('ping-name').focus();
+        });
+    }
+
+    if (closePing && pingOverlay) {
+        closePing.addEventListener('click', (e) => {
+            e.preventDefault();
+            pingOverlay.classList.add('hidden');
+            pingOverlay.classList.remove('flex');
+        });
+    }
+
+    if (pingForm) {
+        pingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('ping-name').value.trim();
+            const subject = document.getElementById('ping-subject').value.trim();
+            const message = document.getElementById('ping-message').value.trim();
+
+            if (!name || !subject || !message) {
+                alert('ERR: MISSING_PAYLOAD_DATA. PLEASE TRANSCRIBE ALL FIELDS.');
+                return;
+            }
+
+            const mailtoLink = `mailto:suvankarmaji72@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("FROM [IDENTIFIER]: " + name + "\n\nPAYLOAD [MESSAGE]:\n" + message)}`;
+            window.location.href = mailtoLink;
+
+            pingOverlay.classList.add('hidden');
+            pingOverlay.classList.remove('flex');
+            pingForm.reset();
+        });
+    }
 });

@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>suvankar_maji@vit_vellore:~</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
     rel="stylesheet" />
@@ -16,70 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "var(--primary)",
-            "secondary": "var(--secondary)",
-            "tertiary": "#eaffde",
-            "on-secondary-fixed-variant": "#614000",
-            "surface-bright": "#3a3939",
-            "on-secondary": "#432c00",
-            "primary-fixed": "#77ff61",
-            "on-secondary-fixed": "#281800",
-            "inverse-on-surface": "#313030",
-            "secondary-container": "#fdaf00",
-            "on-background": "#e5e2e1",
-            "on-primary": "#013a00",
-            "primary-fixed-dim": "#02e600",
-            "on-tertiary": "#013a00",
-            "inverse-surface": "#e5e2e1",
-            "outline-variant": "#3b4b35",
-            "on-error": "#690005",
-            "on-tertiary-fixed-variant": "#015300",
-            "on-secondary-container": "#694600",
-            "primary-container": "#00ff00",
-            "surface-tint": "#02e600",
-            "on-tertiary-fixed": "#002200",
-            "secondary-fixed": "#ffddaf",
-            "error": "#ffb4ab",
-            "surface-container-low": "#1c1b1b",
-            "surface-dim": "#131313",
-            "tertiary-container": "#00ff00",
-            "on-surface-variant": "#b9ccaf",
-            "on-primary-container": "#027100",
-            "surface-container-highest": "#353534",
-            "on-tertiary-container": "#027100",
-            "surface": "#131313",
-            "on-primary-fixed": "#002200",
-            "inverse-primary": "#026e00",
-            "surface-container": "#201f1f",
-            "surface-variant": "#353534",
-            "on-surface": "#e5e2e1",
-            "tertiary-fixed": "#77ff61",
-            "surface-container-lowest": "#0e0e0e",
-            "surface-container-high": "#2a2a2a",
-            "background": "#131313",
-            "secondary-fixed-dim": "#ffba43",
-            "outline": "#84967c",
-            "on-error-container": "#ffdad6",
-            "tertiary-fixed-dim": "#02e600",
-            "on-primary-fixed-variant": "#015300",
-            "error-container": "#93000a"
-          },
-          fontFamily: {
-            "headline": ["Space Grotesk"],
-            "body": ["Inter"],
-            "label": ["Inter"]
-          },
-          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
-        },
-      },
-    }
-  </script>
+  
   <style>
     :root {
       --primary: #00FF00;
@@ -174,6 +111,71 @@
       transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
     }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "var(--primary)",
+            "secondary": "var(--secondary)",
+            "tertiary": "#eaffde",
+            "on-secondary-fixed-variant": "#614000",
+            "surface-bright": "#3a3939",
+            "on-secondary": "#432c00",
+            "primary-fixed": "#77ff61",
+            "on-secondary-fixed": "#281800",
+            "inverse-on-surface": "#313030",
+            "secondary-container": "#fdaf00",
+            "on-background": "#e5e2e1",
+            "on-primary": "#013a00",
+            "primary-fixed-dim": "#02e600",
+            "on-tertiary": "#013a00",
+            "inverse-surface": "#e5e2e1",
+            "outline-variant": "#3b4b35",
+            "on-error": "#690005",
+            "on-tertiary-fixed-variant": "#015300",
+            "on-secondary-container": "#694600",
+            "primary-container": "#00ff00",
+            "surface-tint": "#02e600",
+            "on-tertiary-fixed": "#002200",
+            "secondary-fixed": "#ffddaf",
+            "error": "#ffb4ab",
+            "surface-container-low": "#1c1b1b",
+            "surface-dim": "#131313",
+            "tertiary-container": "#00ff00",
+            "on-surface-variant": "#b9ccaf",
+            "on-primary-container": "#027100",
+            "surface-container-highest": "#353534",
+            "on-tertiary-container": "#027100",
+            "surface": "#131313",
+            "on-primary-fixed": "#002200",
+            "inverse-primary": "#026e00",
+            "surface-container": "#201f1f",
+            "surface-variant": "#353534",
+            "on-surface": "#e5e2e1",
+            "tertiary-fixed": "#77ff61",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "background": "#131313",
+            "secondary-fixed-dim": "#ffba43",
+            "outline": "#84967c",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#02e600",
+            "on-primary-fixed-variant": "#015300",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
 </head>
 
 <body
@@ -271,71 +273,76 @@
           <!-- Neural Metrics Grid: Balanced Row -->
           <div class="grid grid-cols-1 md:col-span-6 md:grid-cols-2 gap-8">
             <!-- Skill Matrix: Segmented Bars -->
-            <div class="bg-surface-container-low p-8 flex flex-col justify-between relative border border-primary/5 rounded-lg min-h-[250px]">
+            <div class="bg-surface-container-low p-8 flex flex-col justify-between relative border border-outline-variant/20 rounded-lg min-h-[250px]">
               <div class="relative z-10 w-full">
-                <div class="flex justify-between items-center border-b border-primary/10 pb-4 mb-8">
+                <div class="flex justify-between items-center border-b border-on-surface/20 pb-4 mb-8">
                   <h3 class="font-headline text-xs font-bold text-primary uppercase tracking-[0.3em]">NEURAL_SKILL_MATRIX</h3>
-                  <span class="text-[8px] font-mono text-primary/40 animate-pulse">LINK_STABLE</span>
+                  <span class="text-[8px] font-mono text-on-surface-variant/60">LINK_STABLE</span>
                 </div>
                 <div class="space-y-8">
                   <div class="skill-node">
                     <div class="flex justify-between font-mono text-[9px] mb-3 uppercase tracking-widest text-on-surface/50">
                       <span>AI_ARCHITECTURE</span>
-                      <span class="text-primary">LOAD: 0x94</span>
+                      <span class="text-primary font-bold">LOAD: 0x94</span>
                     </div>
                     <!-- Segmented Progress Bar -->
-                    <div class="flex gap-1 h-2 w-full">
+                    <div class="flex gap-1 h-3 w-full">
                       <div class="flex-1 bg-primary"></div>
                       <div class="flex-1 bg-primary"></div>
                       <div class="flex-1 bg-primary"></div>
                       <div class="flex-1 bg-primary"></div>
-                      <div class="flex-1 bg-primary/20"></div>
+                      <div class="flex-1 bg-transparent"></div>
                     </div>
                   </div>
                   <div class="skill-node">
                     <div class="flex justify-between font-mono text-[9px] mb-3 uppercase tracking-widest text-on-surface/50">
                        <span>BACKEND_CORE</span>
-                      <span class="text-primary">LOAD: 0x88</span>
+                      <span class="text-primary font-bold">LOAD: 0x88</span>
                     </div>
-                    <div class="flex gap-1 h-2 w-full">
+                    <div class="flex gap-1 h-3 w-full">
                       <div class="flex-1 bg-primary"></div>
                       <div class="flex-1 bg-primary"></div>
                       <div class="flex-1 bg-primary"></div>
-                      <div class="flex-1 bg-primary/40"></div>
-                      <div class="flex-1 bg-primary/10"></div>
+                      <div class="flex-1 bg-transparent"></div>
+                      <div class="flex-1 bg-transparent"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="absolute -right-4 -bottom-4 opacity-[0.03] pointer-events-none">
-                <span class="material-symbols-outlined text-9xl">memory</span>
+              <div class="absolute right-4 bottom-4 opacity-[0.03] pointer-events-none">
+                <span class="material-symbols-outlined text-8xl">memory</span>
               </div>
             </div>
 
             <!-- Sync Rate: Data Visualizer -->
-            <div class="bg-surface-container p-8 flex flex-col justify-between relative border border-secondary/10 rounded-lg min-h-[250px]">
-              <div class="relative z-10">
-                <div class="flex justify-between items-start mb-8">
+            <div class="bg-surface-container-low p-8 flex flex-col justify-between relative border border-outline-variant/20 rounded-lg min-h-[250px]">
+              <div class="relative z-10 h-full flex flex-col">
+                <div class="flex justify-between items-start mb-4">
                   <div>
                     <h3 class="font-headline text-xs font-bold text-secondary uppercase tracking-[0.3em]">NEURAL_SYNC_RATE</h3>
-                    <p class="text-[9px] font-mono text-secondary/40">// SYSTEM_STABILITY_INDEX</p>
+                    <p class="text-[9px] font-mono text-on-surface-variant/60 mt-1">// STABILITY_MONITOR</p>
                   </div>
-                  <span class="material-symbols-outlined text-secondary animate-spin font-light" style="animation-duration: 8s">neurology</span>
+                  <span class="material-symbols-outlined text-secondary font-light animate-pulse">neurology</span>
                 </div>
-                <div class="flex items-end gap-3 h-20 mb-8">
-                   <div class="flex-1 bg-secondary/10 h-[30%] animate-[pulse_2s_infinite]"></div>
-                   <div class="flex-1 bg-secondary/30 h-[60%] animate-[pulse_2s_infinite_0.1s]"></div>
-                   <div class="flex-1 bg-secondary/60 h-[85%] animate-[pulse_2s_infinite_0.2s]"></div>
-                   <div class="flex-1 bg-secondary/40 h-[45%] animate-[pulse_2s_infinite_0.3s]"></div>
-                   <div class="flex-1 bg-secondary/80 h-[92%] animate-[pulse_2s_infinite_0.4s]"></div>
-                   <div class="flex-1 bg-secondary/30 h-[55%] animate-[pulse_2s_infinite_0.5s]"></div>
+                
+                <!-- Terminal Output Animation -->
+                <div class="flex-1 font-mono text-[9px] md:text-[10px] text-secondary/70 overflow-hidden space-y-1 mb-4 flex flex-col justify-center">
+                  <div class="animate-[pulse_2s_ease-in-out_infinite]">> ESTABLISHING_SECURE_LINK... [OK]</div>
+                  <div class="animate-[pulse_2.5s_ease-in-out_infinite]">> KERNEL_MOD_v4.2_LOADED... [OK]</div>
+                  <div class="animate-[pulse_3s_ease-in-out_infinite]">> ALLOCATING_MEMORY_BLOCKS_0xFF...</div>
+                  <div class="text-secondary font-bold mt-2">> SYSTEM_READY_FOR_COMPUTATION</div>
                 </div>
-                <div class="flex justify-between font-mono text-[9px] text-secondary uppercase tracking-widest">
-                  <span class="opacity-60">Status: Optimized</span>
-                  <span class="font-bold">SYNC: 98.5%</span>
+
+                <div class="flex flex-col gap-2 border-t border-outline-variant/10 pt-4">
+                  <div class="w-full bg-surface-container h-1 rounded overflow-hidden">
+                    <div class="bg-secondary h-full w-[98.5%] shadow-[0_0_8px_rgba(255,211,147,0.5)]"></div>
+                  </div>
+                  <div class="flex justify-between font-mono text-[9px] text-secondary uppercase tracking-widest mt-1">
+                    <span class="opacity-60">Status: Optimized</span>
+                    <span class="font-bold">SYNC: 98.5%</span>
+                  </div>
                 </div>
               </div>
-              <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
@@ -344,10 +351,55 @@
 
     <!-- ====== SECTION 2: RESUME / ABOUT ====== -->
     <section id="resume" class="border-t border-outline-variant/10 p-8 md:p-12 max-w-7xl mx-auto">
-      <h2
-        class="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-on-surface uppercase mb-10 flex items-center gap-3">
-        <span class="material-symbols-outlined">person</span> PROFILE_RESUME
-      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8 mb-12">
+        <div class="flex flex-col justify-center">
+          <h2 class="font-headline text-5xl md:text-6xl font-black tracking-tighter text-on-surface uppercase leading-none mb-4">
+            SUVANKAR MAJI
+          </h2>
+          <div class="flex items-center gap-4 mb-10">
+            <div class="h-[2px] w-12 md:w-24 bg-primary shadow-[0_0_15px_var(--primary-glow)]"></div>
+            <span class="font-mono text-primary tracking-widest text-sm md:text-base uppercase font-bold">FULL-STACK ENGINEER & DIGITAL ARCHITECT</span>
+          </div>
+          
+          <div class="flex flex-wrap items-center gap-8 font-mono text-sm font-bold uppercase">
+            <a href="https://drive.google.com/file/d/1a9N3yqG5NKv29h2HJqsBwuQigfe6vD9s/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary transition-colors hover:bg-primary/10 px-2 py-1">
+              <span>> CURL -O RESUME.PDF</span>
+              <span class="w-3 h-4 bg-primary animate-pulse inline-block"></span>
+            </a>
+            <a href="#" class="flex items-center gap-2 text-secondary hover:underline underline-offset-4 decoration-2">
+              <span>_ VIEW_SOURCE</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-surface-container p-6 rounded-lg font-mono border border-outline-variant/5">
+          <div class="space-y-5">
+            <div>
+              <div class="text-on-surface-variant/40 text-[9px] tracking-widest uppercase mb-1">LOCATION</div>
+              <div class="text-on-surface font-bold text-xs tracking-wider">VELLORE, IN // REMOTE</div>
+            </div>
+            <div>
+              <div class="text-on-surface-variant/40 text-[9px] tracking-widest uppercase mb-1">AVAILABILITY</div>
+              <div class="text-primary font-bold text-xs tracking-wider">AVAILABLE_FOR_HIRE</div>
+            </div>
+            <div>
+              <div class="text-on-surface-variant/40 text-[9px] tracking-widest uppercase mb-1">TERMINAL_THEME</div>
+              <div class="text-secondary font-bold text-xs tracking-wider">AMBER_CRT_01</div>
+            </div>
+            
+            <div class="flex gap-6 pt-4 mt-2 border-t border-outline-variant/10">
+              <div class="flex-1">
+                <div class="text-on-surface font-bold text-3xl font-headline tracking-tighter mb-1">12+</div>
+                <div class="text-on-surface-variant/40 text-[8px] tracking-widest uppercase">DEPLOYMENTS</div>
+              </div>
+              <div class="flex-1">
+                <div class="text-on-surface font-bold text-3xl font-headline tracking-tighter mb-1">04</div>
+                <div class="text-on-surface-variant/40 text-[8px] tracking-widest uppercase">CERTIFICATIONS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="grid grid-cols-12 gap-8">
         <!-- Profile Overview -->
         <div class="col-span-12 bg-surface-container p-10 relative overflow-hidden rounded-lg">
@@ -809,7 +861,7 @@
           </div>
           <div class="h-px bg-surface-container-highest"></div>
           <div class="flex items-center gap-4 flex-wrap">
-            <button
+            <button id="instant-ping-btn"
               class="bg-primary-container text-on-primary-container px-6 py-3 font-headline font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity flex items-center gap-2 rounded">
               <span class="material-symbols-outlined">send</span> Instant_Ping
             </button>
@@ -888,6 +940,54 @@
             autocomplete="off" />
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Instant Ping Contact Modal -->
+  <div id="ping-overlay"
+    class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto custom-scrollbar">
+    <div
+      class="bg-surface max-w-lg w-full border border-primary/30 p-8 shadow-[0_0_30px_rgba(0,255,0,0.15)] flex flex-col accent-transition border-primary relative overflow-hidden mt-10 mb-10">
+      <div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none select-none">
+        <span class="material-symbols-outlined text-9xl">contact_mail</span>
+      </div>
+      <div class="flex justify-between items-center mb-8 relative z-10">
+        <div class="flex items-center gap-3">
+          <span class="w-3 h-3 bg-primary animate-pulse"></span>
+          <h2 class="font-headline text-2xl font-bold text-primary uppercase tracking-widest">
+            INSTANT_PING
+          </h2>
+        </div>
+        <button id="close-ping" class="material-symbols-outlined text-on-surface-variant hover:text-error transition-colors">close</button>
+      </div>
+
+      <form id="ping-form" class="space-y-6 relative z-10 font-mono text-sm">
+        <div class="space-y-2">
+          <label class="block text-primary-fixed-dim uppercase tracking-widest text-[10px]">> IDENTIFIER [NAME]*</label>
+          <input type="text" id="ping-name" required
+            class="w-full bg-surface-container-low border-b border-outline-variant/50 text-on-surface focus:outline-none focus:border-primary px-3 py-3 transition-colors placeholder-on-surface-variant/30"
+            placeholder="GUEST_USER" />
+        </div>
+        
+        <div class="space-y-2">
+          <label class="block text-primary-fixed-dim uppercase tracking-widest text-[10px]">> PROTOCOL [SUBJECT]*</label>
+          <input type="text" id="ping-subject" required
+            class="w-full bg-surface-container-low border-b border-outline-variant/50 text-on-surface focus:outline-none focus:border-primary px-3 py-3 transition-colors placeholder-on-surface-variant/30"
+            placeholder="INQUIRY / OPPORTUNITY" />
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-primary-fixed-dim uppercase tracking-widest text-[10px]">> PAYLOAD [MESSAGE]*</label>
+          <textarea id="ping-message" required rows="5"
+            class="w-full bg-surface-container-low border-b border-outline-variant/50 text-on-surface focus:outline-none focus:border-primary px-3 py-3 transition-colors placeholder-on-surface-variant/30 custom-scrollbar resize-none"
+            placeholder="ENTER_TRANSMISSION_DATA..."></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-primary-container text-on-primary-container font-headline font-bold tracking-widest py-4 hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mt-8 rounded uppercase">
+          TRANSMIT <span class="material-symbols-outlined text-base">send</span>
+        </button>
+      </form>
     </div>
   </div>
 

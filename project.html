@@ -1,124 +1,219 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "tertiary": "#eaffde",
-              "on-secondary-fixed-variant": "#614000",
-              "surface-bright": "#3a3939",
-              "on-secondary": "#432c00",
-              "primary-fixed": "#77ff61",
-              "on-secondary-fixed": "#281800",
-              "inverse-on-surface": "#313030",
-              "secondary-container": "#fdaf00",
-              "on-background": "#e5e2e1",
-              "on-primary": "#013a00",
-              "primary-fixed-dim": "#02e600",
-              "on-tertiary": "#013a00",
-              "inverse-surface": "#e5e2e1",
-              "secondary": "#ffd393",
-              "outline-variant": "#3b4b35",
-              "on-error": "#690005",
-              "on-tertiary-fixed-variant": "#015300",
-              "on-secondary-container": "#694600",
-              "primary-container": "#00ff00",
-              "surface-tint": "#02e600",
-              "on-tertiary-fixed": "#002200",
-              "secondary-fixed": "#ffddaf",
-              "error": "#ffb4ab",
-              "surface-container-low": "#1c1b1b",
-              "surface-dim": "#131313",
-              "tertiary-container": "#00ff00",
-              "on-surface-variant": "#b9ccaf",
-              "on-primary-container": "#027100",
-              "surface-container-highest": "#353534",
-              "on-tertiary-container": "#027100",
-              "surface": "#131313",
-              "on-primary-fixed": "#002200",
-              "primary": "#eaffde",
-              "inverse-primary": "#026e00",
-              "surface-container": "#201f1f",
-              "surface-variant": "#353534",
-              "on-surface": "#e5e2e1",
-              "tertiary-fixed": "#77ff61",
-              "surface-container-lowest": "#0e0e0e",
-              "surface-container-high": "#2a2a2a",
-              "background": "#131313",
-              "secondary-fixed-dim": "#ffba43",
-              "outline": "#84967c",
-              "on-error-container": "#ffdad6",
-              "tertiary-fixed-dim": "#02e600",
-              "on-primary-fixed-variant": "#015300",
-              "error-container": "#93000a"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Inter"],
-              "mono": ["Space Mono"]
-            },
-            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>suvankar_maji@vit_vellore:~</title>
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary: #00FF00;
+      --primary-glow: rgba(0, 255, 0, 0.4);
+      --primary-bg: rgba(0, 255, 0, 0.1);
+      --secondary: #ffd393;
+      --surface: #131313;
+      --surface-container: #201f1f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .cursor-terminal {
+      cursor: crosshair;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--surface);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 8px var(--primary-glow);
+    }
+
+    .nav-link.active {
+      color: var(--primary) !important;
+      border-bottom: 2px solid var(--primary) !important;
+      opacity: 1 !important;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* CRT Shutdown Animation */
+    @keyframes crt-shutdown {
+      0% {
+        transform: scaleY(1) scaleX(1);
+        filter: brightness(1);
+      }
+
+      40% {
+        transform: scaleY(0.005) scaleX(1.1);
+        filter: brightness(2);
+      }
+
+      70% {
+        transform: scaleY(0.005) scaleX(0);
+        filter: brightness(5);
+      }
+
+      100% {
+        transform: scaleY(0) scaleX(0);
+        filter: brightness(10);
+        opacity: 0;
+      }
+    }
+
+    .shutdown-anim {
+      animation: crt-shutdown 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    /* Modal Transitions */
+    .modal-enter {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .modal-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 0.3s ease;
+    }
+
+    .accent-transition {
+      transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "var(--primary)",
+            "secondary": "var(--secondary)",
+            "tertiary": "#eaffde",
+            "on-secondary-fixed-variant": "#614000",
+            "surface-bright": "#3a3939",
+            "on-secondary": "#432c00",
+            "primary-fixed": "#77ff61",
+            "on-secondary-fixed": "#281800",
+            "inverse-on-surface": "#313030",
+            "secondary-container": "#fdaf00",
+            "on-background": "#e5e2e1",
+            "on-primary": "#013a00",
+            "primary-fixed-dim": "#02e600",
+            "on-tertiary": "#013a00",
+            "inverse-surface": "#e5e2e1",
+            "outline-variant": "#3b4b35",
+            "on-error": "#690005",
+            "on-tertiary-fixed-variant": "#015300",
+            "on-secondary-container": "#694600",
+            "primary-container": "#00ff00",
+            "surface-tint": "#02e600",
+            "on-tertiary-fixed": "#002200",
+            "secondary-fixed": "#ffddaf",
+            "error": "#ffb4ab",
+            "surface-container-low": "#1c1b1b",
+            "surface-dim": "#131313",
+            "tertiary-container": "#00ff00",
+            "on-surface-variant": "#b9ccaf",
+            "on-primary-container": "#027100",
+            "surface-container-highest": "#353534",
+            "on-tertiary-container": "#027100",
+            "surface": "#131313",
+            "on-primary-fixed": "#002200",
+            "inverse-primary": "#026e00",
+            "surface-container": "#201f1f",
+            "surface-variant": "#353534",
+            "on-surface": "#e5e2e1",
+            "tertiary-fixed": "#77ff61",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "background": "#131313",
+            "secondary-fixed-dim": "#ffba43",
+            "outline": "#84967c",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#02e600",
+            "on-primary-fixed-variant": "#015300",
+            "error-container": "#93000a"
           },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .cursor-terminal { cursor: crosshair; }
-      ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: #131313; }
-      ::-webkit-scrollbar-thumb { background: #02e600; }
-      .glass-panel {
-        backdrop-filter: blur(16px);
-        background: rgba(28, 28, 28, 0.7);
-      }
-      @keyframes blink { 
-        0%, 100% { opacity: 1; } 
-        50% { opacity: 0; } 
-      }
-      .terminal-cursor {
-        display: inline-block;
-        width: 8px;
-        height: 16px;
-        background-color: #02e600;
-        animation: blink 1s step-end infinite;
-        vertical-align: middle;
-      }
-    </style>
+      },
+    }
+  </script>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopAppBar Shell -->
-<header class="fixed top-0 z-[60] bg-[#131313] text-[#00FF00] font-['Space_Grotesk'] tracking-tight uppercase text-sm flex justify-between items-center w-full px-6 h-12 shadow-[0_0_10px_rgba(2,230,0,0.08)]">
-<div class="flex items-center gap-2">
-<span class="text-[#00FF00] font-mono font-bold before:content-['&gt;_']">suvankar_maji@vit_vellore:~</span>
-</div>
-<nav class="hidden md:flex gap-8">
-<a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0" href="./main.html">./home</a>
-<a class="text-[#00FF00] border-b border-[#00FF00] hover:bg-[#02e600]/10 transition-colors duration-0" href="./project.html">./projects</a>
-<a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0" href="./education.html">./education</a>
-<a class="text-[#00FF00]/60 hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0" href="./resume.html">./resume</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-lg cursor-terminal">terminal</button>
-<button class="material-symbols-outlined text-lg cursor-terminal">settings</button>
-<button class="material-symbols-outlined text-lg cursor-terminal text-error">power_settings_new</button>
-</div>
-</header>
-<!-- SideNavBar Shell -->
-<!-- Main Canvas -->
-<main class="mt-12 pb-12 min-h-screen bg-surface px-8 md:px-24 lg:px-48">
+
+<body
+  class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container cursor-terminal overflow-hidden h-screen flex flex-col">
+  <!-- TopAppBar Navigation Shell -->
+  <header
+    class="bg-[#131313] flex justify-between items-center w-full px-6 h-12 z-50 fixed top-0 border-none shadow-[0_0_10px_rgba(2,230,0,0.08)]">
+    <div class="flex items-center gap-4">
+      <span
+        class="text-[#00FF00] font-mono font-bold before:content-['&gt;_'] font-['Space_Grotesk'] tracking-tight uppercase text-sm accent-transition">maji_engine@vellore:~</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="nav-link text-[#00FF00]/60 font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./index.html#home">./home</a>
+      <a class="nav-link text-[#00FF00]/60 font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./education.html">./education</a>
+      <a class="nav-link text-[#00FF00]/60 font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./index.html#resume">./resume</a>
+      <a class="nav-link text-[#00FF00]/60 font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./index.html#experience">./experience</a>
+      <a class="nav-link text-[#00FF00] border-b border-[#00FF00] font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./project.html">./projects</a>
+      <a class="nav-link text-[#00FF00]/60 font-['Space_Grotesk'] tracking-tight uppercase text-sm hover:bg-[#02e600]/10 hover:text-[#00FF00] transition-colors duration-0 px-2 h-12 flex items-center"
+        href="./index.html#contact">./contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <span id="terminal-trigger"
+        class="material-symbols-outlined text-[#00FF00] hover:bg-[#02e600]/10 p-1 cursor-terminal accent-transition"
+        title="Open Terminal">terminal</span>
+      <span id="settings-trigger"
+        class="material-symbols-outlined text-[#00FF00] hover:bg-[#02e600]/10 p-1 cursor-terminal accent-transition"
+        title="System Settings">settings</span>
+      <span id="power-trigger"
+        class="material-symbols-outlined text-[#00FF00] hover:bg-[#02e600]/10 p-1 cursor-terminal accent-transition"
+        title="Shutdown System">power_settings_new</span>
+    </div>
+  </header>
+  <main class="mt-12 mb-8 flex-1 relative overflow-y-auto bg-surface px-8 md:px-24 lg:px-48">
 <!-- Header Section -->
 <section class="p-12 border-b border-outline-variant/10">
 <div class="max-w-6xl mx-auto flex justify-between items-end">
@@ -245,24 +340,157 @@
 </div>
 </section>
 </main>
-<!-- Footer Shell -->
-<footer class="fixed bottom-0 w-full z-50 bg-[#131313] text-[#FFBF00] font-mono text-[10px] uppercase tracking-widest flex justify-between px-6 py-1 items-center h-8">
-<div class="flex items-center gap-4">
-<span>SYS_STATUS: ONLINE</span>
-<span class="opacity-30">|</span>
-<span>SHELL: ZSH</span>
-<span class="opacity-30">|</span>
-<span>LAST_LOGIN: 2023-10-27</span>
-</div>
-<div class="flex gap-6">
-<a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors" href="#">MAN_PAGES</a>
-<a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors" href="#">PRIVACY</a>
-<a class="text-[#FFBF00]/50 hover:text-[#FFBF00] hover:bg-[#FFBF00]/10 transition-colors" href="#">ENCRYPT</a>
-</div>
-</footer>
-<!-- Abstract Background Pattern (Visual only) -->
-<div class="fixed inset-0 pointer-events-none z-[-1] opacity-[0.03]">
-<div class="absolute inset-0" data-alt="Subtle digital grid pattern with dots" style="background-image: radial-gradient(#02e600 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
-</div>
-<script src="./scripts.js"></script>
-</body></html>
+  <!-- Interactive Terminal Footer -->
+  <footer class="fixed bottom-0 w-full z-50 bg-[#131313] px-6 py-1 h-8 flex items-center justify-between border-none">
+    <div class="flex items-center gap-4 flex-1">
+      <span class="text-secondary font-mono text-[10px] uppercase tracking-widest whitespace-nowrap">SYS_STATUS:
+        ONLINE</span>
+      <div class="h-4 w-[1px] bg-secondary/20"></div>
+      <div class="flex items-center gap-2 flex-1 max-w-xl group">
+        <span class="text-[#00FF00] font-mono text-[10px]">&gt;</span>
+        <input id="terminal-input"
+          class="bg-transparent border-none outline-none text-[#00FF00] font-mono text-[10px] w-full placeholder:text-[#00FF00]/30 focus:ring-0 p-0"
+          placeholder="// enter_command_here" type="text" autocomplete="off" />
+        <span id="typing-cursor" class="w-1 h-3 bg-[#00FF00] animate-pulse ml-1 inline-block"></span>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-4">
+        <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] font-mono text-[10px] uppercase tracking-widest transition-colors"
+          href="#">MAN_PAGES</a>
+        <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] font-mono text-[10px] uppercase tracking-widest transition-colors"
+          href="#">PRIVACY</a>
+        <a class="text-[#FFBF00]/50 hover:text-[#FFBF00] font-mono text-[10px] uppercase tracking-widest transition-colors"
+          href="#">ENCRYPT</a>
+      </div>
+      <div class="h-4 w-[1px] bg-secondary/20"></div>
+      <span class="text-secondary font-mono text-[10px] uppercase tracking-widest opacity-60">UPTIME: <span
+          id="uptime-counter">00:00:00</span> | LOGIN: 2023-10-27</span>
+    </div>
+  </footer>
+  <!-- Ambient Glow / CRT Effect Overlay -->
+  <div
+    class="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(2,230,0,0.02)_0%,rgba(0,0,0,0)_100%)] z-10 transition-colors duration-500"
+    id="ambient-glow"></div>
+  <div id="crt-overlay" class="fixed inset-0 pointer-events-none opacity-[0.03] z-[60]"
+    style="background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%;">
+  </div>
+
+  <!-- NEW FEATURES: Modals & Overlays -->
+
+  <!-- Terminal Modal -->
+  <div id="terminal-overlay"
+    class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 md:p-12 overflow-hidden">
+    <div
+      class="bg-surface w-full h-full max-w-5xl border border-[#00FF00]/30 shadow-[0_0_30px_rgba(2,230,0,0.2)] flex flex-col accent-transition border-primary">
+      <div class="bg-surface-container h-10 flex items-center justify-between px-4 border-b border-[#00FF00]/20">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-error"></span>
+          <span class="w-3 h-3 rounded-full bg-secondary"></span>
+          <span class="w-3 h-3 rounded-full bg-primary-fixed-dim"></span>
+          <span class="ml-4 font-mono text-xs text-[#00FF00]/60 uppercase tracking-widest">root@v-maji:~ terminal</span>
+        </div>
+        <button id="close-terminal"
+          class="material-symbols-outlined text-[#00FF00]/60 hover:text-error transition-colors">close</button>
+      </div>
+      <div id="terminal-body" class="flex-1 p-6 font-mono text-sm overflow-y-auto custom-scrollbar space-y-2">
+        <p class="text-[#00FF00]/40">// SYSTEM ACCESS GRANTED</p>
+        <p class="text-[#00FF00]/40">// WELCOME SUVANKAR_MAJI</p>
+        <p class="text-[#00FF00]/40">// TYPE 'HELP' FOR COMMANDS</p>
+        <div id="terminal-history"></div>
+        <div class="flex items-center gap-2">
+          <span class="text-[#00FF00]">&gt;</span>
+          <input id="modal-terminal-input" type="text"
+            class="flex-1 bg-transparent border-none outline-none text-[#00FF00] focus:ring-0 p-0" autofocus
+            autocomplete="off" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settings-overlay"
+    class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div
+      class="bg-surface-container max-w-md w-full border border-[#00FF00]/20 p-8 space-y-8 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+      <div class="flex justify-between items-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface uppercase tracking-widest flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">settings</span> SYSTEM_CONFIG
+        </h2>
+        <button id="close-settings" class="material-symbols-outlined hover:text-error transition-colors">close</button>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xs font-mono text-on-surface-variant uppercase tracking-widest">Accent_Color_Protocol</h3>
+        <div class="grid grid-cols-4 gap-4">
+          <button
+            class="theme-btn w-full aspect-square bg-[#00FF00] border-2 border-transparent hover:border-white transition-all shadow-[0_0_10px_rgba(0,255,0,0.5)]"
+            data-color="#00FF00"></button>
+          <button
+            class="theme-btn w-full aspect-square bg-[#FFB000] border-2 border-transparent hover:border-white transition-all shadow-[0_0_10px_rgba(255,176,0,0.5)]"
+            data-color="#FFB000"></button>
+          <button
+            class="theme-btn w-full aspect-square bg-[#00D1FF] border-2 border-transparent hover:border-white transition-all shadow-[0_0_10px_rgba(0,209,255,0.5)]"
+            data-color="#00D1FF"></button>
+          <button
+            class="theme-btn w-full aspect-square bg-[#FF3131] border-2 border-transparent hover:border-white transition-all shadow-[0_0_10px_rgba(255,49,49,0.5)]"
+            data-color="#FF3131"></button>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xs font-mono text-on-surface-variant uppercase tracking-widest">CRT_Effect_Filter</h3>
+        <div class="flex items-center justify-between p-4 bg-surface-container-low">
+          <span class="font-mono text-sm">Scanline Overlay</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="toggle-crt" checked class="sr-only peer">
+            <div
+              class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Power/Shutdown Overlay -->
+  <div id="shutdown-overlay"
+    class="fixed inset-0 z-[200] bg-black hidden flex-col items-center justify-center space-y-8">
+    <div id="shutdown-screen" class="w-full h-full bg-black flex flex-col items-center justify-center p-12">
+      <h1 class="font-mono text-4xl text-[#00FF00] animate-pulse uppercase tracking-[1em]" id="shutdown-text">SHUTTING
+        DOWN_</h1>
+      <div class="w-64 h-2 bg-surface-container-highest mt-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#00FF00] w-full" id="shutdown-progress"></div>
+      </div>
+    </div>
+    <div id="reboot-screen" class="hidden flex flex-col items-center gap-12">
+      <div class="w-32 h-32 border-4 border-[#00FF00]/20 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined text-6xl text-[#00FF00] animate-pulse">power_settings_new</span>
+      </div>
+      <button id="reboot-btn"
+        class="bg-[#00FF00] text-[#013a00] font-headline font-bold px-12 py-4 tracking-[0.2em] hover:bg-[#77ff61] transition-all uppercase">Reboot
+        System</button>
+    </div>
+  </div>
+
+  <!-- System Dashboard Modals (Intact) -->
+  <div id="dashboard-overlay"
+    class="fixed inset-0 z-[150] bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface border border-primary/20 w-full max-w-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden">
+      <div class="bg-surface-container h-10 flex items-center justify-between px-4 border-b border-primary/10">
+        <span id="dashboard-title"
+          class="font-mono text-xs text-primary uppercase tracking-[0.2em]">SYSTEM_DASHBOARD</span>
+        <button onclick="closeDashboard()"
+          class="material-symbols-outlined text-primary/60 hover:text-error transition-colors">close</button>
+      </div>
+      <div id="dashboard-content" class="p-8 font-mono text-xs space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
+        <!-- Content injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts.js"></script>
+
+</body>
+
+</html>
