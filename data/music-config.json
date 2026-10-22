@@ -1,0 +1,52 @@
+{
+  "audioFiles": [
+    {
+      "filename": "Bizet-Carmen-Overture- LukasSchuch.mp3",
+      "title": "Ambient Focus",
+      "description": "Calm ambient music for productivity"
+    },
+    {
+      "filename": "Russian folk song - Dark eyes - Arany Zoltán.mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    },
+    {
+      "filename": "Hearts-of-Iron-IV-Katyusha[Full version]-HanHarrison.mp3", 
+      "title": "Lo-Fi Beats",
+      "description": "Relaxing lo-fi hip hop beats"
+    },
+    {
+      "filename": "I Wanna Be Like You - The Harvard Krokodiloes - Harvard Krokodiloes.mp3",
+      "title": "Nature Sounds",
+      "description": "Peaceful forest and rain sounds"
+    },
+    {
+      "filename": "Les Yeux Noirs (Dark Eyes)  Django Reinhardt  Pomplamoose ft. The Vignes Rooftop Revival - PomplamooseMusic.mp3",
+      "title": "Classical Piano",
+      "description": "Gentle classical piano melodies"
+    },
+    {
+      "filename": "No Surprises - Vintage 1930s Jazz Radiohead Cover ft. Chloe Feoranzo - PostmodernJukebox.mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    },
+    {
+      "filename": "Paganini in gypsy jazz style - HotClubdePiracicaba (1080p, h264).mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    },
+    {
+      "filename": "Queen - Somebody To Love (Official Video) - Queen Official.mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    },
+    {
+      "filename": "Elton John - I'm Still Standing - EltonJohnVEVO.mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    }
+    
+  ],
+  "defaultVolume": 0.3,
+  "autoPlay": true
+}
